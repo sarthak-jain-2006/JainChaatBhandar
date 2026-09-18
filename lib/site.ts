@@ -72,6 +72,9 @@ export function photoSlot(
 }
 
 export type Photo = {
+  /** Stable identity for React keys: independent of src and caption, both of
+      which repeat while the slots are still placeholders. */
+  id: string;
   src: string;
   alt: string;
   width: number;
@@ -82,42 +85,47 @@ export type Photo = {
 };
 
 export const heroPhoto: Photo = {
-  src: photoSlot(400, 500, 12, true),
-  alt: "The counter of Jain Chaat Bhandar at evening, with tikkis on the tawa and the queue forming in Lalbagh",
-  width: 400,
-  height: 500,
-  slot: "Photo slot (4:5):",
-  caption: " the counter at evening rush. Replace with a real photograph.",
+  id: "hero",
+  src: "/img/homepage.jpg",
+  alt: "The shopfront of Jain Chaat Bhandar in Lalbagh: the red signboard above a counter where staff work over steel vessels and trays of puris",
+  width: 1024,
+  height: 1536,
+  slot: "",
+  caption: "Jain Chaat Bhandar",
 };
 
 export const storyPhoto: Photo = {
-  src: photoSlot(400, 300, 10, true),
+  id: "story",
+  src: "/img/start.jpg",
   alt: "Sanjeev Kumar Jain and Raju at the counter of Jain Chaat Bhandar",
   width: 400,
   height: 300,
   slot: "",
   caption:
-    "Photo slot (4:3): the brothers at the counter. Replace with a real photograph.",
+    "The start of Jain Chaat Bhandar",
 };
 
 export const gallery: Photo[] = [
   {
-    src: photoSlot(600, 600, 14, true),
-    alt: "Aloo tikki being pressed and crisped on the tawa at Jain Chaat Bhandar",
-    width: 600,
-    height: 600,
-    slot: "Slot 1:",
-    caption: " tikkis on the tawa, close up",
+    id: "tikkis",
+    src: "/img/tikki.jpg",
+    alt: "Rows of aloo tikkis crisping on a large tawa, turned with a long spatula at the counter",
+    width: 1200,
+    height: 800,
+    slot: "",
+    caption: "Tikkis on the tawa",
   },
   {
-    src: photoSlot(400, 300, 10),
-    alt: "A finished plate of papdi chaat with sweet curd, tamarind chutney and the house spice mix",
-    width: 400,
-    height: 300,
-    slot: "Slot 2:",
-    caption: " papdi chaat, plated",
+    id: "prep",
+    src: "/img/batashe.jpg",
+    alt: "A steel tray heaped with puris, beside bowls of papdi, spiced filling and green chutney",
+    width: 1200,
+    height: 800,
+    slot: "",
+    caption: "Preparation",
   },
   {
+    id: "golgappe",
     src: photoSlot(400, 300, 10),
     alt: "Golgappe being filled at the counter",
     width: 400,
@@ -126,14 +134,16 @@ export const gallery: Photo[] = [
     caption: " golgappe, mid-fill",
   },
   {
-    src: photoSlot(400, 620, 10),
-    alt: "The Jain Chaat Bhandar shopfront at Lalbagh with its signboard lit for the evening",
-    width: 400,
-    height: 620,
-    slot: "Slot 4:",
-    caption: " the shopfront and signboard",
+    id: "alootikki",
+    src: "/img/seasoning.jpg",
+    alt: "A plate of aloo tikki chaat being finished by hand, fresh coriander scattered over curd and spice",
+    width: 1200,
+    height: 960,
+    slot: "",
+    caption: "Aloo tikki being made",
   },
   {
+    id: "dahi-bade",
     src: photoSlot(400, 300, 10),
     alt: "Dahi bade topped with sweet curd and spices",
     width: 400,
@@ -142,6 +152,7 @@ export const gallery: Photo[] = [
     caption: " dahi bade, topped",
   },
   {
+    id: "seasoning",
     src: photoSlot(400, 300, 10),
     alt: "Sanjeev Kumar Jain preparing the house spice mix",
     width: 400,
@@ -150,20 +161,58 @@ export const gallery: Photo[] = [
     caption: " the seasoning being made",
   },
   {
-    src: photoSlot(800, 300, 12),
-    alt: "The evening crowd in Lalbagh outside Jain Chaat Bhandar",
-    width: 800,
-    height: 300,
-    slot: "Slot 7:",
-    caption: " the evening queue outside the shop",
+    id: "aditi",
+    src: "/img/aditirao.jpg",
+    alt: "Aditi Rao Hydari photographed with the shopkeeper on the street outside the shop in Lalbagh",
+    width: 960,
+    height: 1280,
+    slot: "",
+    caption: "Aditi Rao Hydari",
   },
   {
-    src: photoSlot(400, 300, 10),
-    alt: "Matar chaat served hot at the counter",
-    width: 400,
-    height: 300,
-    slot: "Slot 8:",
-    caption: " matar chaat, served hot",
+    id: "cid",
+    src: "/img/cid.jpg",
+    alt: "Visitors sitting along the counter eating chaat from paper bowls, one of them taking a selfie",
+    width: 1600,
+    height: 777,
+    slot: "",
+    caption: "CID Team",
+  },
+  {
+    id: "ahaana",
+    src: "/img/ahaana.jpg",
+    alt: "Ahaana Kumra eating a golgappa at the counter while the staff work behind her",
+    width: 989,
+    height: 846,
+    slot: "",
+    caption: "Ahaana Kumra",
+  },
+  {
+    id: "varun",
+    src: "/img/varun.jpg",
+    alt: "Varun Sharma photographed with the shopkeeper beside the day's sacks of puris",
+    width: 960,
+    height: 1280,
+    slot: "",
+    caption: "Varun Sharma",
+  },
+  {
+    id: "aparshakti",
+    src: "/img/aparshakti.jpg",
+    alt: "Aparshakti Khurana with his arm around the shopkeeper at the shop, in a still from a Lucknow Times interview",
+    width: 1280,
+    height: 716,
+    slot: "",
+    caption: "Aparshakti Khurana",
+  },
+  {
+    id: "rati",
+    src: "/img/rati.jpg",
+    alt: "Rati Shankar Tripathi photographed with the shopkeeper at the counter",
+    width: 768,
+    height: 1024,
+    slot: "",
+    caption: "Rati Shankar Tripathi",
   },
 ];
 
@@ -174,37 +223,37 @@ export const menuColumns: MenuItem[][] = [
   [
     {
       name: "Aloo tikki chaat",
-      price: "₹90",
+      price: "₹80",
       description:
         "Crisped slowly on the tawa, broken open, and dressed with curd, chutney and spice.",
     },
     {
       name: "Papdi chaat",
-      price: "₹90",
+      price: "₹80",
       description:
         "Crisp papdi under curd and chutney, the plate most regulars start with.",
     },
     {
       name: "Matar chaat",
-      price: "₹90",
+      price: "₹80",
       description: "Slow-cooked white peas, served hot with the dry spice mix.",
     },
   ],
   [
     {
-      name: "Golgappe",
-      price: "₹90",
+      name: "Pani ke batashe",
+      price: "₹30",
       description:
         "Filled one at a time at the counter, as fast as you can eat them.",
     },
     {
-      name: "Dahi puri",
-      price: "₹90",
+      name: "Dahi ke batashe",
+      price: "₹80",
       description: "Puris filled and topped with sweet curd and both chutneys.",
     },
     {
       name: "Dahi bada",
-      price: "₹90",
+      price: "₹80",
       description:
         "Soft badas rested in seasoned curd until they give way to a spoon.",
     },

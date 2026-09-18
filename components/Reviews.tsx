@@ -8,11 +8,6 @@ export default function Reviews() {
       <div className="wrap">
         <Reveal className="sec-head">
           <h2>What Lucknow says</h2>
-          <p className="sub">
-            We don&apos;t publish invented testimonials. These are the shop&apos;s
-            real aggregate ratings, and an honest summary of what more than a
-            thousand reviewers keep repeating.
-          </p>
         </Reveal>
         <div className="r-grid">
           {ratings.map(({ score, source, detail }) => (

@@ -113,8 +113,11 @@ section{ scroll-margin-top:84px; }
 .hero h1{ font-size:clamp(2.6rem, 6vw, 4.2rem); color:var(--ink); }
 .hero-photo{
   aspect-ratio:4/5;
-  box-shadow: 12px 12px 0 -1px var(--sand), 12px 12px 0 0 var(--brass);
 }
+/* The shopfront photo is taller than the 4:5 frame, so cover crops it.
+   Anchor to the top so the signboard stays whole and the trim comes off
+   the foreground instead. */
+.hero-photo img{ object-position:center top; }
 .est-line{
   margin-top:14px; display:flex; align-items:center; gap:14px;
   color:var(--brick); font-weight:600; font-size:1.02rem;

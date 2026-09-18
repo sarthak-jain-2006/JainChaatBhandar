@@ -131,10 +131,12 @@ export function PhotoFigure({
         height={photo.height}
         loading={eager ? "eager" : "lazy"}
       />
-      <figcaption>
-        {photo.slot && <b>{photo.slot}</b>}
-        {photo.caption}
-      </figcaption>
+      {(photo.slot || photo.caption) && (
+        <figcaption>
+          {photo.slot && <b>{photo.slot}</b>}
+          {photo.caption}
+        </figcaption>
+      )}
     </figure>
   );
 }

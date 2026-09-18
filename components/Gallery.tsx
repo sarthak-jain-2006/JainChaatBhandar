@@ -92,11 +92,6 @@ export default function Gallery() {
         <div className="g-head">
           <Reveal className="sec-head">
             <h2>From the counter</h2>
-            <p className="sub">
-              Eight photo slots, captioned for the shots that tell this shop&apos;s
-              story. Each is a labelled placeholder; swap in real photographs
-              before launch.
-            </p>
           </Reveal>
           <div className="g-nav">
             <button
@@ -138,14 +133,9 @@ export default function Gallery() {
           }}
         >
           {gallery.map((photo) => (
-            <PhotoFigure key={photo.slot} photo={photo} />
+            <PhotoFigure key={photo.id} photo={photo} />
           ))}
         </div>
-        <p className="g-note">
-          All slots are placeholders at a uniform 4:3 frame; slide with the
-          arrows or swipe to see them all. No stock or borrowed imagery has been
-          used, and the lightbox is already wired for when real photos go in.
-        </p>
       </div>
     </section>
   );
