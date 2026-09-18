@@ -45,7 +45,11 @@ Other scripts: `npm run build`, `npm start`, `npm run lint`.
 
 ## Deploying
 
-The site is hosted on Vercel and deploys automatically on every push to `main`. Vercel detects Next.js with no configuration; there is no build command or output directory to set.
+The site is hosted on Vercel and deploys automatically on every push to `main`.
+
+`vercel.json` pins the framework, build command and install command. This matters because the Vercel project predates the Next.js migration: it was set up to serve a single static `index.html` from the repository root, and those dashboard settings do not update themselves. Settings in `vercel.json` take precedence over the dashboard, so the project builds correctly without anyone having to remember to change them.
+
+`engines.node` in `package.json` keeps the build on Node 20.9 or newer, which Next 16 requires.
 
 ## Before the site goes live
 
