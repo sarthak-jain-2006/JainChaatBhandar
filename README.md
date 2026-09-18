@@ -1,6 +1,6 @@
 # Jain Chaat Bhandar
 
-Marketing website for Jain Chaat Bhandar, a pure-vegetarian Jain chaat shop at Lalbagh Chowk, Lucknow, established 1968.
+Marketing website for Jain Chaat Bhandar, a pure-vegetarian Jain chaat shop in Lalbagh, Lucknow, established 1968.
 
 ## What this is
 
