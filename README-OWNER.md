@@ -1,12 +1,12 @@
 # Jain Chaat Bhandar — pre-launch checklist
 
-The site is complete and ready to host as a static page (`index.html` + `sitemap.xml` + `robots.txt`).
+The site is complete and ready to deploy. It is a Next.js app; all shop content lives in `lib/site.ts`, so most of the changes below are edits to that one file.
 Before it goes live, confirm these with the shop:
 
 ## Must confirm
 - [ ] **Phone / WhatsApp number** — the site uses **+91 96287 44871** (found in public listings). Verify it rings at the counter; it powers the call button and the WhatsApp chat link.
 - [ ] **Exact address wording and the Google Maps pin** — currently "Naval Kishore Road, opposite Novelty Cinema, Lalbagh, Lucknow 226001". Some directories list it as "Nawal Kishore Halsia, Sushanpura". Once confirmed, also check that the embedded map on the Contact section points at the right pin.
-- [ ] **Opening hours** — the site says **daily, 4:00–10:00 PM**. Sources vary between 4 PM and 5 PM opening; confirm at the counter and update the Hours block, hero fact strip, footer, and the JSON-LD (`opens`/`closes`) in `index.html`.
+- [ ] **Opening hours** — the site says **daily, 4:00–10:00 PM**. Sources vary between 4 PM and 5 PM opening; confirm at the counter and update `hoursDisplay`, `opens` and `closes` in `lib/site.ts`, then the wording in the Hours block (`components/Contact.tsx`), the hero fact strip (`components/Hero.tsx`) and the footer (`components/SiteFooter.tsx`).
 - [x] **Menu prices** — confirmed by the owner: ₹90 per plate, all six items.
 - [x] **Swiggy and Zomato links** — both buttons now point at the shop's real ordering pages, supplied by the owner.
 - [ ] **Founding year** — the site uses **1968** (owner-stated). One public heritage-festival profile suggests the move to the shop unit was late 1980s; if the shop wants a more detailed timeline, the Story section's three-part timeline is where it goes.
@@ -15,12 +15,13 @@ Before it goes live, confirm these with the shop:
 - Hero: counter at evening rush — portrait, 4:5
 - Gallery: a horizontal slider of 8 uniform landscape slots (4:3) — tikkis on the tawa, papdi chaat, golgappe mid-fill, the shopfront and signboard, dahi bade, the seasoning being made, the evening queue, matar chaat
 - Story: the brothers at the counter — 4:3
-- Also replace the `og:image` URL in the `<head>` with a real photo (1200×630 works best for link previews).
+- Photos go in `public/img/`, and the slots that point at them are defined in `lib/site.ts`.
+- Also replace the `openGraph.images` path in `app/layout.tsx` with a real photo (1200×630 works best for link previews).
 
 ## Technical, on launch
-- [ ] Replace every `https://www.jainchaatbhandar.com/` placeholder (canonical tag, OG tags, JSON-LD `url`, `sitemap.xml`, `robots.txt`) with the real domain.
+- [ ] Replace the domain in one place: `siteUrl` in `lib/site.ts`. The canonical tag, OG tags, JSON-LD `url`, `sitemap.xml` and `robots.txt` are all generated from it.
 - [ ] Add social links to the footer **only if the shop actually has accounts** — none were found publicly, so none were invented.
-- [ ] Compress real photos before uploading (WebP or quality-80 JPEG, max ~1600px wide); all `<img>` tags are already lazy-loaded.
+- [ ] Compress real photos before uploading (WebP or quality-80 JPEG, max ~1600px wide); every photo slot below the fold is already lazy-loaded.
 
 ## Deliberately left out (owner's instructions)
 - No "desi ghee" claims and no "token system" mentions anywhere.
