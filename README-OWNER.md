@@ -8,7 +8,7 @@ Before it goes live, confirm these with the shop:
 - [ ] **Exact address wording and the Google Maps pin** — currently "Naval Kishore Road, opposite Novelty Cinema, Lalbagh, Lucknow 226001". Some directories list it as "Nawal Kishore Halsia, Sushanpura". Once confirmed, also check that the embedded map on the Contact section points at the right pin.
 - [ ] **Opening hours** — the site says **daily, 4:00–10:00 PM**. Sources vary between 4 PM and 5 PM opening; confirm at the counter and update the Hours block, hero fact strip, footer, and the JSON-LD (`opens`/`closes`) in `index.html`.
 - [x] **Menu prices** — confirmed by the owner: ₹90 per plate, all six items.
-- [ ] **Swiggy link** — the "Order on Swiggy" button currently points at a Swiggy search for the shop's name. Replace it with the shop's direct Swiggy restaurant URL once you have it (the Zomato button already uses the real page).
+- [x] **Swiggy and Zomato links** — both buttons now point at the shop's real ordering pages, supplied by the owner.
 - [ ] **Founding year** — the site uses **1968** (owner-stated). One public heritage-festival profile suggests the move to the shop unit was late 1980s; if the shop wants a more detailed timeline, the Story section's three-part timeline is where it goes.
 
 ## Photography (10 slots, all clearly labelled in the page)
