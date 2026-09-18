@@ -47,7 +47,9 @@ Other scripts: `npm run build`, `npm start`, `npm run lint`.
 
 The site is hosted on Vercel and deploys automatically on every push to `main`.
 
-`vercel.json` pins the framework, build command and install command. This matters because the Vercel project predates the Next.js migration: it was set up to serve a single static `index.html` from the repository root, and those dashboard settings do not update themselves. Settings in `vercel.json` take precedence over the dashboard, so the project builds correctly without anyone having to remember to change them.
+`vercel.json` pins the framework, build command, install command and output directory. This matters because the Vercel project predates the Next.js migration: it was set up to serve a single static `index.html` from the repository root, and those dashboard settings do not update themselves. Settings in `vercel.json` take precedence over the dashboard, so the project builds correctly without anyone having to remember to change them.
+
+`outputDirectory` is the one to leave alone. The project's dashboard still sets it to `public`, which is why the first Next.js deploy failed with *No Output Directory named "public" found*. Now that `public/` exists and holds the photographs, that stale setting would no longer fail the build. It would quietly publish the images on their own instead of the site, so `vercel.json` names `.next` explicitly to keep the real build output in place.
 
 `engines.node` in `package.json` keeps the build on Node 20.9 or newer, which Next 16 requires.
 
