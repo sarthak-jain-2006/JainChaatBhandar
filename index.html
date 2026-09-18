@@ -1,0 +1,956 @@
+<!-- ======================================================================
+     Jain Chaat Bhandar — Lalbagh, Lucknow · single-page marketing site
+     Static, dependency-light. Fonts via Google Fonts; everything else inline.
+     BEFORE LAUNCH — confirm with the shop (see README-OWNER.md):
+       · exact address wording + Google Maps pin
+       · phone / WhatsApp number (+91 96287 44871 — found in public listings)
+       · opening hours (4–10 PM daily used here)
+       · menu prices: ₹90 per plate, owner-confirmed
+       · real photographs for every placeholder slot
+       · replace https://www.jainchaatbhandar.com/ with the real domain
+     ====================================================================== -->
+<meta charset="utf-8">
+<title>Jain Chaat Bhandar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jain Chaat Bhandar, Lalbagh: serving Lucknow's chaat since 1968. Aloo tikki, matar chaat, golgappe and dahi bade from a pure-vegetarian Jain kitchen, made without onion or garlic. Opposite Novelty Cinema, near Hazratganj.">
+<link rel="canonical" href="https://www.jainchaatbhandar.com/"><!-- replace with real domain -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jain Chaat Bhandar, Lalbagh, Lucknow">
+<meta property="og:description" content="Chaat in Lucknow since 1968. A pure-vegetarian Jain kitchen at Lalbagh Chowk, made without onion or garlic, with a counter that has drawn a queue for over five decades.">
+<meta property="og:url" content="https://www.jainchaatbhandar.com/">
+<meta property="og:image" content="https://www.jainchaatbhandar.com/img/og-counter.jpg"><!-- replace with real photo -->
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jain Chaat Bhandar, Lalbagh, Lucknow">
+<meta name="twitter:description" content="Chaat in Lucknow since 1968. A pure-vegetarian Jain kitchen at Lalbagh Chowk.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@300;400;500;600;700&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Jain Chaat Bhandar",
+  "alternateName": ["Jain Chaat Centre", "Jain Chat Corner"],
+  "description": "Pure-vegetarian Jain chaat shop in Lalbagh, Lucknow, established 1968. Chaat made without onion or garlic. Takeaway and self-service counter; delivery via Swiggy and Zomato.",
+  "servesCuisine": ["Chaat", "North Indian street food"],
+  "priceRange": "₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Naval Kishore Road, opposite Novelty Cinema, Lalbagh",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "226001",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91 96287 44871",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "16:00",
+    "closes": "22:00"
+  },
+  "acceptsReservations": "False",
+  "url": "https://www.jainchaatbhandar.com/",
+  "foundingDate": "1968",
+  "founder": { "@type": "Person", "name": "Santosh Kumar Jain" }
+}
+</script>
+
+<style>
+  /* ---------- Lakhauri tokens ---------- */
+  :root{
+    --sand:       #E8DEC9;   /* page ground */
+    --sand-deep:  #DFD3B8;   /* tinted bands */
+    --ivory:      #F3EBDB;   /* raised surfaces */
+    --brick:      #74302B;   /* primary — Lakhauri brick maroon */
+    --brick-deep: #552220;   /* menu board, footer */
+    --brick-soft: #8C4B44;   /* hover tints on deep grounds */
+    --brass:      #A17E3E;   /* thin rules, marks */
+    --brass-soft: #C2A468;   /* brass on deep grounds */
+    --ink:        #362A21;   /* body text */
+    --ink-soft:   #5D4E3F;   /* secondary text */
+    --veg:        #3F6238;   /* pure-veg mark only */
+    --line:       rgba(93,78,63,.28);
+
+    --font-display: "Rozha One", "Georgia", serif;
+    --font-body: "Mukta", "Segoe UI", system-ui, sans-serif;
+
+    --w: 1100px;
+    --dur: 280ms;
+    --ease: cubic-bezier(.33,.02,.2,1);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--font-body);
+    font-size:17px; line-height:1.65; font-weight:400;
+    color:var(--ink);
+    background:var(--sand);
+  }
+  main{ display:block; }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--brick); text-decoration-thickness:1px; text-underline-offset:3px; transition:color var(--dur) var(--ease); }
+  a:hover{ color:var(--brick-deep); }
+  :focus-visible{ outline:2px solid var(--brass); outline-offset:3px; border-radius:2px; }
+  ::selection{ background:var(--brick); color:var(--ivory); }
+
+  h1,h2,h3{ font-family:var(--font-display); font-weight:400; line-height:1.15; text-wrap:balance; }
+
+  .wrap{ max-width:var(--w); margin:0 auto; padding:0 24px; }
+
+  section{ scroll-margin-top:84px; }
+
+  /* ---------- header ---------- */
+  .site-head{
+    position:sticky; top:0; z-index:40;
+    background:var(--sand);
+    border-bottom:1px solid var(--line);
+  }
+  .site-head .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    min-height:64px; gap:16px;
+  }
+  .wordmark{
+    font-family:var(--font-display); font-size:1.4rem; color:var(--ink);
+    text-decoration:none; letter-spacing:.01em; line-height:1;
+    display:inline-flex; align-items:center; gap:11px;
+  }
+  .wordmark::before{
+    content:""; width:9px; height:9px; flex:none;
+    border:1.5px solid var(--brass); transform:rotate(45deg);
+  }
+  .nav{ display:flex; align-items:center; gap:28px; }
+  .nav a{
+    font-weight:500; font-size:.98rem; color:var(--ink); text-decoration:none;
+    border-bottom:2px solid transparent; padding:4px 0;
+    transition:border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .nav a:hover{ border-bottom-color:var(--brass); color:var(--brick); }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    font-family:var(--font-body); font-weight:600; font-size:.98rem;
+    padding:10px 20px; border-radius:3px; border:1px solid transparent;
+    text-decoration:none; cursor:pointer; white-space:nowrap;
+    transition:background-color var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .btn svg{ width:17px; height:17px; flex:none; }
+  .btn-solid{ background:var(--brick); color:#FFFFFF; }
+  .btn-solid:hover{ background:var(--brick-deep); color:#FFFFFF; }
+  .btn-line{ border-color:var(--brick); color:var(--brick); background:transparent; }
+  .btn-line:hover{ background:rgba(116,48,43,.08); color:var(--brick-deep); }
+  .btn-brass{ background:var(--brass); color:#2E2415; }
+  .btn-brass:hover{ background:#8E6E33; color:var(--ivory); }
+  .nav a.nav-go{ display:inline-flex; align-items:center; gap:8px; font-weight:600; }
+  .nav a.nav-go svg{ width:17px; height:17px; color:var(--brass); flex:none; }
+
+  .nav-toggle{
+    display:none; background:none; border:1px solid var(--line); border-radius:3px;
+    padding:8px; cursor:pointer; color:var(--ink);
+  }
+  .nav-toggle svg{ width:22px; height:22px; display:block; }
+  .nav-toggle .icon-x{ display:none; }
+  .nav-toggle[aria-expanded="true"] .icon-bars{ display:none; }
+  .nav-toggle[aria-expanded="true"] .icon-x{ display:block; }
+
+  @media (max-width: 820px){
+    .nav-toggle{ display:block; }
+    .nav{
+      position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:stretch; gap:0;
+      background:var(--ivory); border-bottom:1px solid var(--line);
+      display:none; padding:8px 0 14px;
+    }
+    .nav.open{ display:flex; }
+    .nav a{ padding:13px 24px; border-bottom:none; font-size:1.05rem; }
+    .nav a:hover{ background:rgba(116,48,43,.06); }
+    .nav .btn{ margin:10px 24px 0; justify-content:center; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero{ background:var(--sand); padding:64px 0 56px; }
+  .hero .wrap{
+    display:grid; grid-template-columns: 1.15fr .85fr; gap:56px; align-items:center;
+  }
+  .hero h1{ font-size:clamp(2.6rem, 6vw, 4.2rem); color:var(--ink); }
+  .hero-photo{
+    box-shadow: 12px 12px 0 -1px var(--sand), 12px 12px 0 0 var(--brass);
+  }
+  .est-line{
+    margin-top:14px; display:flex; align-items:center; gap:14px;
+    color:var(--brick); font-weight:600; font-size:1.02rem;
+  }
+  .est-line::before{ content:""; width:44px; height:1px; background:var(--brass); flex:none; }
+  .hero-lede{
+    margin-top:20px; max-width:34em; color:var(--ink-soft); font-size:1.08rem;
+  }
+  .hero-lede strong{ color:var(--ink); font-weight:600; }
+  .hero-actions{ margin-top:30px; display:flex; gap:14px; flex-wrap:wrap; }
+
+  .hero-facts{
+    margin-top:44px; padding-top:26px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+  }
+  .fact{ display:flex; gap:11px; align-items:flex-start; }
+  .fact svg{ width:19px; height:19px; flex:none; margin-top:3px; color:var(--brass); }
+  .fact.veg svg{ color:var(--veg); }
+  .fact b{ display:block; font-weight:600; font-size:.95rem; color:var(--ink); line-height:1.35; }
+  .fact span{ font-size:.85rem; color:var(--ink-soft); line-height:1.4; }
+
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns:1fr; gap:40px; }
+    .hero-facts{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width: 480px){
+    .hero{ padding:44px 0 40px; }
+    .hero-facts{ grid-template-columns:1fr 1fr; gap:18px; }
+  }
+
+  /* ---------- jali band ---------- */
+  .jali{
+    height:26px;
+    background-color:var(--sand-deep);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26' viewBox='0 0 52 26'%3E%3Cg fill='none' stroke='%23A17E3E' stroke-width='1' opacity='0.55'%3E%3Cpath d='M0 13 L13 0 L26 13 L13 26 Z'/%3E%3Cpath d='M26 13 L39 0 L52 13 L39 26 Z'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3Ccircle cx='39' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat-x;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- section headings ---------- */
+  .sec-head{ margin-bottom:36px; }
+  .sec-head::before{
+    content:""; display:block; width:10px; height:10px;
+    border:1.5px solid var(--brass); transform:rotate(45deg);
+    margin:0 0 16px 2px;
+  }
+  .sec-head h2{ font-size:clamp(1.9rem, 4vw, 2.6rem); color:var(--ink); margin-top:6px; }
+  .sec-head p.sub{ margin-top:10px; color:var(--ink-soft); max-width:44em; }
+  .sec-head.on-deep::before{ border-color:var(--brass-soft); }
+  .sec-head.on-deep h2{ color:var(--ivory); }
+  .sec-head.on-deep p.sub{ color:#D9C6B4; }
+
+  /* ---------- gallery (horizontal slider) ---------- */
+  .gallery{ background:var(--ivory); padding:64px 0 72px; border-bottom:1px solid var(--line); }
+  .g-item{ position:relative; overflow:hidden; border-radius:3px; margin:0; cursor:pointer; }
+  .g-item img{ width:100%; height:100%; object-fit:cover; }
+  .g-item figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    background:rgba(54,42,33,.82); color:#E9DFCB;
+    font-size:.78rem; line-height:1.4; padding:7px 11px;
+  }
+  .g-item figcaption b{ color:var(--brass-soft); font-weight:600; }
+  .g-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }
+  .g-nav{ display:flex; gap:10px; margin-bottom:36px; flex:none; }
+  .g-btn{
+    width:44px; height:44px; display:grid; place-items:center;
+    background:var(--sand); border:1px solid var(--line); border-radius:3px;
+    color:var(--ink); cursor:pointer;
+    transition:border-color var(--dur) var(--ease), background-color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  }
+  .g-btn svg{ width:19px; height:19px; }
+  .g-btn:hover{ border-color:var(--brass); }
+  .g-btn[disabled]{ opacity:.35; cursor:default; }
+  .g-btn[disabled]:hover{ border-color:var(--line); }
+  .g-track{
+    display:flex; gap:14px;
+    overflow-x:auto; overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+    padding-bottom:4px;
+  }
+  .g-track::-webkit-scrollbar{ display:none; }
+  .g-track .g-item{
+    flex:0 0 min(74vw, 380px);
+    aspect-ratio:4/3;
+    scroll-snap-align:start;
+  }
+  .g-note{ margin-top:18px; font-size:.9rem; color:var(--ink-soft); }
+  @media (max-width: 600px){
+    .g-head{ flex-direction:column; align-items:flex-start; gap:0; }
+    .g-nav{ margin:0 0 22px; }
+  }
+
+  /* ---------- story ---------- */
+  .story{ background:var(--sand); padding:72px 0; }
+  .story-cols{ display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:start; }
+  .story-text p{ margin-bottom:18px; color:var(--ink); max-width:36em; }
+  .story-text p b{ font-weight:600; }
+  .story-text p:first-of-type::first-letter{
+    font-family:var(--font-display); color:var(--brick);
+    font-size:3.3em; line-height:.82; float:left; padding:6px 12px 0 0;
+  }
+  .story-aside{ display:grid; gap:22px; }
+  .story-photo{ margin:0; }
+  .story-photo img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; }
+  .story-photo figcaption{ font-size:.8rem; color:var(--ink-soft); margin-top:8px; }
+  .jain-note{
+    border-left:3px solid var(--brass); background:var(--ivory);
+    padding:20px 22px; border-radius:0 3px 3px 0;
+  }
+  .jain-note h3{ font-size:1.25rem; color:var(--brick); margin-bottom:8px; }
+  .jain-note p{ font-size:.98rem; color:var(--ink-soft); }
+  .story-line{
+    margin-top:44px; padding-top:28px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+  }
+  .era b{ font-family:var(--font-display); font-size:1.5rem; color:var(--brick); display:block; line-height:1.2; }
+  .era span{ font-size:.93rem; color:var(--ink-soft); display:block; margin-top:5px; max-width:26em; }
+  @media (max-width: 900px){
+    .story-cols{ grid-template-columns:1fr; gap:36px; }
+    .story-line{ grid-template-columns:1fr; gap:20px; }
+  }
+
+  /* ---------- menu ---------- */
+  .menu{ background:var(--sand); padding:0 0 76px; }
+  .board{
+    background:var(--brick-deep); color:var(--ivory);
+    border-radius:4px; padding:56px 56px 44px;
+    border:1px solid #3F1917;
+    box-shadow:0 1px 0 rgba(54,42,33,.25);
+    position:relative;
+  }
+  .board::after{
+    content:""; position:absolute; inset:10px; pointer-events:none;
+    border:1px solid rgba(194,164,104,.35); border-radius:2px;
+  }
+  .board .sec-head{ margin-bottom:30px; }
+  .board-cols{ display:grid; grid-template-columns:1fr 1fr; gap:12px 56px; }
+  .m-item{ display:flex; align-items:baseline; gap:10px; padding:13px 0 11px; border-top:1px solid rgba(233,223,203,.12); }
+  .board-cols > div > .m-item:first-child{ border-top:none; padding-top:4px; }
+  .m-name{ font-weight:600; color:var(--ivory); white-space:nowrap; }
+  .m-dots{ flex:1; border-bottom:1px dotted rgba(233,223,203,.4); transform:translateY(-4px); min-width:24px; }
+  .m-price{ font-weight:600; color:var(--brass-soft); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .m-desc{ font-size:.9rem; color:#D9C6B4; margin-top:-7px; padding-bottom:10px; max-width:30em; }
+  .board-foot{
+    margin-top:34px; padding-top:20px; border-top:1px solid rgba(194,164,104,.35);
+    display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    font-size:.9rem; color:#D9C6B4;
+  }
+  .board-foot .veg-mark{ display:inline-flex; align-items:center; gap:8px; color:#B9CDA9; font-weight:500; }
+  .board-foot .veg-mark svg{ width:16px; height:16px; }
+  @media (max-width: 860px){
+    .board{ padding:38px 26px 32px; }
+    .board-cols{ grid-template-columns:1fr; gap:6px; }
+  }
+  @media (max-width: 380px){
+    .m-name{ white-space:normal; }
+  }
+
+  /* ---------- reviews ---------- */
+  .reviews{ background:var(--ivory); padding:72px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .r-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px; }
+  .r-tile{
+    background:var(--sand); border:1px solid var(--line); border-radius:3px;
+    padding:24px 26px;
+  }
+  .r-tile .score{
+    font-family:var(--font-display); font-size:2.4rem; color:var(--brick); line-height:1;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .r-tile .score svg{ width:20px; height:20px; color:var(--brass); }
+  .r-tile b{ display:block; margin-top:10px; font-weight:600; color:var(--ink); }
+  .r-tile span{ font-size:.88rem; color:var(--ink-soft); }
+  .r-themes{ display:grid; grid-template-columns:1fr 1fr; gap:32px 56px; }
+  .r-themes h3{ font-size:1.3rem; color:var(--brick); margin-bottom:10px; }
+  .r-themes p{ color:var(--ink-soft); max-width:34em; }
+  .r-src{ margin-top:34px; padding-top:18px; border-top:1px solid var(--line); font-size:.88rem; color:var(--ink-soft); }
+  @media (max-width: 860px){
+    .r-grid{ grid-template-columns:1fr; }
+    .r-themes{ grid-template-columns:1fr; gap:24px; }
+  }
+
+  /* ---------- contact ---------- */
+  .contact{ background:var(--sand); padding:64px 0 72px; }
+  .c-cols{ display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:start; }
+  .c-block{ padding:14px 0; border-top:1px solid var(--line); display:flex; gap:13px; align-items:flex-start; }
+  .c-block:first-of-type{ border-top:none; padding-top:2px; }
+  .c-block svg{ width:19px; height:19px; flex:none; margin-top:4px; color:var(--brass); }
+  .c-block h3{ font-size:1.05rem; color:var(--ink); font-family:var(--font-body); font-weight:600; margin-bottom:2px; }
+  .c-block p{ color:var(--ink-soft); font-size:.95rem; max-width:30em; }
+  .c-block p b{ color:var(--ink); font-weight:600; }
+  .c-actions{ margin-top:20px; display:flex; gap:12px; flex-wrap:wrap; }
+  .map-frame{
+    border:1px solid var(--line); border-radius:3px; overflow:hidden;
+    background:var(--sand-deep); min-height:340px; position:relative;
+  }
+  .map-frame iframe{ width:100%; height:340px; border:0; display:block; }
+  .map-under{ font-size:.85rem; color:var(--ink-soft); margin-top:10px; }
+  @media (max-width: 900px){
+    .c-cols{ grid-template-columns:1fr; gap:32px; }
+    .map-frame iframe{ height:300px; }
+    .map-frame{ min-height:300px; }
+  }
+
+  /* ---------- footer ---------- */
+  .site-foot{ background:var(--brick-deep); color:#D9C6B4; }
+  .site-foot .wrap{
+    padding:48px 24px 40px;
+    display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px;
+  }
+  .site-foot .fm{ font-family:var(--font-display); color:var(--ivory); font-size:1.45rem; }
+  .site-foot .fm span{ display:block; font-family:var(--font-body); font-size:.85rem; color:var(--brass-soft); font-weight:500; margin-top:4px; }
+  .site-foot p{ font-size:.92rem; margin-top:14px; max-width:26em; }
+  .site-foot h3{ font-family:var(--font-body); font-weight:600; font-size:.98rem; color:var(--ivory); margin-bottom:12px; }
+  .site-foot ul{ list-style:none; }
+  .site-foot li{ margin-bottom:8px; }
+  .site-foot a{ color:#D9C6B4; text-decoration:none; font-size:.95rem; border-bottom:1px solid transparent; transition:color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+  .site-foot a:hover{ color:var(--ivory); border-bottom-color:var(--brass-soft); }
+  .foot-base{
+    border-top:1px solid rgba(194,164,104,.25);
+  }
+  .foot-base .wrap{
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding:18px 24px; font-size:.85rem; color:#B79E8C;
+  }
+  @media (max-width: 820px){
+    .site-foot .wrap{ grid-template-columns:1fr; gap:28px; }
+  }
+
+  /* ---------- lightbox ---------- */
+  .lb{
+    position:fixed; inset:0; z-index:60; display:none;
+    background:rgba(38,26,19,.94);
+    align-items:center; justify-content:center; padding:32px;
+  }
+  .lb.open{ display:flex; }
+  .lb img{ max-width:min(92vw,1000px); max-height:82vh; border-radius:3px; }
+  .lb-cap{ position:absolute; bottom:26px; left:0; right:0; text-align:center; color:#D9C6B4; font-size:.92rem; padding:0 24px; }
+  .lb-close{
+    position:absolute; top:18px; right:18px;
+    background:none; border:1px solid rgba(233,223,203,.4); border-radius:3px;
+    color:var(--ivory); padding:9px; cursor:pointer;
+    transition:border-color var(--dur) var(--ease);
+  }
+  .lb-close:hover{ border-color:var(--brass-soft); }
+  .lb-close svg{ width:20px; height:20px; display:block; }
+
+  /* ---------- motion (two deliberate moments) ---------- */
+  .rise{ opacity:0; transform:translateY(14px); transition:opacity 340ms var(--ease), transform 340ms var(--ease); }
+  .rise.in{ opacity:1; transform:none; }
+  .hero .rise:nth-child(1){ transition-delay:0ms; }
+  .hero .rise:nth-child(2){ transition-delay:70ms; }
+  .hero .rise:nth-child(3){ transition-delay:140ms; }
+  .hero .rise:nth-child(4){ transition-delay:210ms; }
+  .hero .rise:nth-child(5){ transition-delay:280ms; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .rise{ opacity:1; transform:none; transition:none; }
+    *{ transition-duration:0ms !important; }
+  }
+</style>
+
+<!-- ================= header ================= -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Jain Chaat Bhandar</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg class="icon-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#gallery">Gallery</a>
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-go" href="https://www.google.com/maps/dir/?api=1&destination=Jain+Chaat+Bhandar,+Lalbagh,+Lucknow" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Directions
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= hero ================= -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div>
+        <h1 class="rise">Jain Chaat Bhandar</h1>
+        <p class="est-line rise">Established 1968, Lalbagh Chowk, Lucknow</p>
+        <p class="hero-lede rise">
+          A small counter opposite Novelty Cinema that has fed three generations of
+          Lucknow its evening chaat. Everything here comes from a
+          <strong>pure-vegetarian Jain kitchen, made without onion or garlic</strong>,
+          and the flavour has never needed them.
+        </p>
+        <div class="hero-actions rise">
+          <a class="btn btn-solid" href="https://www.zomato.com/lucknow/jain-chaat-bhandar-1-lalbagh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Order on Zomato
+          </a>
+          <a class="btn btn-line" href="https://www.swiggy.com/search?query=Jain%20Chaat%20Bhandar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Order on Swiggy
+          </a>
+          <a class="btn btn-line" href="https://wa.me/919628744871?text=Namaste%2C%20I%27d%20like%20to%20place%20a%20takeaway%20order." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <figure class="g-item tall rise hero-photo" data-lightbox style="aspect-ratio:4/5; grid-row:auto;">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23DFD3B8'/%3E%3Crect x='12' y='12' width='376' height='476' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3Cpath d='M170 250 L200 220 L230 250 L200 280 Z' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+             alt="The counter of Jain Chaat Bhandar at evening, with tikkis on the tawa and the queue forming at Lalbagh Chowk" width="400" height="500">
+        <figcaption><b>Photo slot (4:5):</b> the counter at evening rush. Replace with a real photograph.</figcaption>
+      </figure>
+    </div>
+    <div class="wrap">
+      <div class="hero-facts">
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Open daily, 4–10 PM</b><span>Evening service, as chaat should be</span></div>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>Opposite Novelty Cinema</b><span>Lalbagh, a short walk from Hazratganj</span></div>
+        </div>
+        <div class="fact veg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.5 5-6"/></svg>
+          <div><b>Pure vegetarian</b><span>Jain kitchen, no onion or garlic</span></div>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg>
+          <div><b>4.4 on Google</b><span>1,800+ reviews across platforms</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="jali" role="presentation"></div>
+
+  <!-- ================= gallery ================= -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="g-head">
+        <div class="sec-head rise">
+          <h2>From the counter</h2>
+          <p class="sub">Eight photo slots, captioned for the shots that tell this shop's story.
+          Each is a labelled placeholder; swap in real photographs before launch.</p>
+        </div>
+        <div class="g-nav">
+          <button class="g-btn" id="gprev" aria-label="Scroll gallery left" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="g-btn" id="gnext" aria-label="Scroll gallery right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="g-track" id="gtrack" aria-label="Shop photo gallery">
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%23DFD3B8'/%3E%3Crect x='14' y='14' width='572' height='572' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3Cpath d='M270 300 L300 270 L330 300 L300 330 Z' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="Aloo tikki being pressed and crisped on the tawa at Jain Chaat Bhandar" width="600" height="600">
+          <figcaption><b>Slot 1:</b> tikkis on the tawa, close up</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="A finished plate of papdi chaat with sweet curd, tamarind chutney and the house spice mix" width="400" height="300">
+          <figcaption><b>Slot 2:</b> papdi chaat, plated</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="Golgappe being filled at the counter" width="400" height="300">
+          <figcaption><b>Slot 3:</b> golgappe, mid-fill</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 620'%3E%3Crect width='400' height='620' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='600' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="The Jain Chaat Bhandar shopfront at Lalbagh with its signboard lit for the evening" width="400" height="620">
+          <figcaption><b>Slot 4:</b> the shopfront and signboard</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="Dahi bade topped with sweet curd and spices" width="400" height="300">
+          <figcaption><b>Slot 5:</b> dahi bade, topped</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="Sanjeev Kumar Jain preparing the house spice mix" width="400" height="300">
+          <figcaption><b>Slot 6:</b> the seasoning being made</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300'%3E%3Crect width='800' height='300' fill='%23DFD3B8'/%3E%3Crect x='12' y='12' width='776' height='276' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="The evening crowd at Lalbagh Chowk outside Jain Chaat Bhandar" width="800" height="300">
+          <figcaption><b>Slot 7:</b> the evening queue at the chowk</figcaption>
+        </figure>
+        <figure class="g-item" data-lightbox>
+          <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+               alt="Matar chaat served hot at the counter" width="400" height="300">
+          <figcaption><b>Slot 8:</b> matar chaat, served hot</figcaption>
+        </figure>
+      </div>
+      <p class="g-note">All slots are placeholders at a uniform 4:3 frame; slide with the arrows or swipe to see them all. No stock or borrowed imagery has been used, and the lightbox is already wired for when real photos go in.</p>
+    </div>
+  </section>
+
+  <!-- ================= story ================= -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2>From a pavement stall at the crossroads</h2>
+      </div>
+      <div class="story-cols">
+        <div class="story-text">
+          <p>
+            In 1968, <b>Santosh Kumar Jain</b> came to Lucknow from Tikait Nagar, a small town in
+            Barabanki district, and set up a chaat stall on the pavement near the Lalbagh
+            crossroads. There was no shop and no signboard: just a stall, a tawa, and a spot
+            between Novelty Cinema and the GPO where the whole city seemed to pass by every evening.
+          </p>
+          <p>
+            The stall earned its place the slow way. Regulars came back for the tikki, brought
+            their children, and eventually their children's children. In time the pavement stall
+            became a proper unit, a small standing-room counter that still works the way the
+            stall did: you order, you watch your plate being made, and you eat it right there
+            or carry it home.
+          </p>
+          <p>
+            Today the shop is run by Santosh Kumar Jain's sons, <b>Sanjeev Kumar Jain and Raju</b>.
+            Sanjeev still prepares the house seasoning himself. The sweet curd, the tamarind
+            chutney and the dry spice mix that finish every plate are made to the same hand,
+            every day, before the counter opens.
+          </p>
+        </div>
+        <div class="story-aside">
+          <figure class="story-photo g-item" data-lightbox style="aspect-ratio:4/3;">
+            <img loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DFD3B8'/%3E%3Crect x='10' y='10' width='380' height='280' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3Cpath d='M170 150 L200 120 L230 150 L200 180 Z' fill='none' stroke='%23A17E3E' stroke-width='1.5' opacity='.6'/%3E%3C/svg%3E"
+                 alt="Sanjeev Kumar Jain and Raju at the counter of Jain Chaat Bhandar" width="400" height="300">
+            <figcaption style="position:static; background:none; color:var(--ink-soft); padding:8px 0 0;">Photo slot (4:3): the brothers at the counter. Replace with a real photograph.</figcaption>
+          </figure>
+          <div class="jain-note">
+            <h3>No onion. No garlic.</h3>
+            <p>
+              As a Jain-run kitchen, everything here is made without two things most people
+              assume chaat can't do without. It never held the flavour back. The seasoning does
+              the work instead, and after five decades the queue outside settles the argument.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="story-line">
+        <div class="era"><b>1968</b><span>Santosh Kumar Jain sets up a pavement stall near the Lalbagh crossroads.</span></div>
+        <div class="era"><b>The shop</b><span>The stall moves into a proper unit at Lalbagh: same corner, same counter service.</span></div>
+        <div class="era"><b>Today</b><span>Sanjeev Kumar Jain and Raju run the counter; the seasoning is still made in-house.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= menu ================= -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="board rise">
+        <div class="sec-head on-deep">
+          <h2>The menu</h2>
+          <p class="sub">Six plates, done the same way for over fifty years. Every one is finished with sweet curd,
+          tamarind chutney and the house-ground spice mix, Lucknow-style.</p>
+        </div>
+        <div class="board-cols">
+          <div>
+            <div class="m-item"><span class="m-name">Aloo tikki chaat</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Crisped slowly on the tawa, broken open, and dressed with curd, chutney and spice.</p>
+            <div class="m-item"><span class="m-name">Papdi chaat</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Crisp papdi under curd and chutney, the plate most regulars start with.</p>
+            <div class="m-item"><span class="m-name">Matar chaat</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Slow-cooked white peas, served hot with the dry spice mix.</p>
+          </div>
+          <div>
+            <div class="m-item"><span class="m-name">Golgappe</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Filled one at a time at the counter, as fast as you can eat them.</p>
+            <div class="m-item"><span class="m-name">Dahi puri</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Puris filled and topped with sweet curd and both chutneys.</p>
+            <div class="m-item"><span class="m-name">Dahi bada</span><span class="m-dots"></span><span class="m-price">₹90</span></div>
+            <p class="m-desc">Soft badas rested in seasoned curd until they give way to a spoon.</p>
+          </div>
+        </div>
+        <div class="board-foot">
+          <span class="veg-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.5 5-6"/></svg>
+            Pure vegetarian Jain kitchen, made without onion or garlic
+          </span>
+          <span>Takeaway at the counter. Delivery on Swiggy and Zomato.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= reviews ================= -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2>What Lucknow says</h2>
+        <p class="sub">We don't publish invented testimonials. These are the shop's real aggregate ratings,
+        and an honest summary of what more than a thousand reviewers keep repeating.</p>
+      </div>
+      <div class="r-grid">
+        <div class="r-tile">
+          <span class="score">4.4<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></span>
+          <b>Google</b><span>1,800+ reviews</span>
+        </div>
+        <div class="r-tile">
+          <span class="score">4.4<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></span>
+          <b>Justdial</b><span>1,000+ ratings</span>
+        </div>
+        <div class="r-tile">
+          <span class="score">4.9<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></span>
+          <b>Restaurant Guru</b><span>Among Lucknow's best-rated chaat</span>
+        </div>
+      </div>
+      <div class="r-themes">
+        <div>
+          <h3>What people praise</h3>
+          <p>
+            The same three things, across platforms and years: the flavour and freshness of the
+            plates, the balance of the house seasoning, and the quick, friendly service at the
+            counter. Many reviewers call it the best chaat shop in Lucknow outright.
+          </p>
+        </div>
+        <div>
+          <h3>What to know before you come</h3>
+          <p>
+            The honest note in the reviews: there's no seating, and the counter gets crowded at
+            peak evening hours. It's a standing-room shop and always has been. Come as you are,
+            eat where you stand, or take it home.
+          </p>
+        </div>
+      </div>
+      <p class="r-src">Ratings as listed publicly on Google, Justdial and Restaurant Guru at the time of writing. Also on <a href="https://www.zomato.com/lucknow/jain-chaat-bhandar-1-lalbagh" target="_blank" rel="noopener">Zomato</a> and Swiggy for delivery.</p>
+    </div>
+  </section>
+
+  <!-- ================= contact ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2>Finding the counter</h2>
+      </div>
+      <div class="c-cols">
+        <div>
+          <div class="c-block">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <h3>Address</h3>
+              <p>Naval Kishore Road, opposite Novelty Cinema,<br>Lalbagh, Lucknow 226001. A short walk from Hazratganj and the GPO.</p>
+            </div>
+          </div>
+          <div class="c-block">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div>
+              <h3>Hours</h3>
+              <p><b>Open daily, 4:00 PM to 10:00 PM.</b> Evening service only; come early to beat the peak crowd.</p>
+            </div>
+          </div>
+          <div class="c-block">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <div>
+              <h3>Phone &amp; WhatsApp</h3>
+              <p><a href="tel:+919628744871">+91 96287 44871</a>. Takeaway counter; delivery on Swiggy and Zomato. No parking nearby, so arrive on foot from the Hazratganj side.</p>
+            </div>
+          </div>
+          <div class="c-actions">
+            <a class="btn btn-brass" href="https://wa.me/919628744871?text=Namaste%2C%20I%27d%20like%20to%20place%20a%20takeaway%20order." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a class="btn btn-line" href="tel:+919628744871">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+              Call the counter
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="map-frame">
+            <iframe
+              title="Map: Jain Chaat Bhandar, Lalbagh, Lucknow"
+              src="https://www.google.com/maps?q=Jain%20Chaat%20Bhandar%2C%20Naval%20Kishore%20Road%2C%20Lalbagh%2C%20Lucknow&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <p class="map-under">If the map doesn't load, <a href="https://www.google.com/maps/dir/?api=1&destination=Jain+Chaat+Bhandar,+Lalbagh,+Lucknow" target="_blank" rel="noopener">open directions in Google Maps</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= footer ================= -->
+<div class="jali" role="presentation"></div>
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <p class="fm">Jain Chaat Bhandar<span>Established 1968, Lalbagh, Lucknow</span></p>
+      <p>A pure-vegetarian Jain chaat counter at Lalbagh Chowk, Lucknow. Three generations,
+      one corner, and the same seasoning made fresh every evening.</p>
+    </div>
+    <div>
+      <h3>Sections</h3>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Visit</h3>
+      <ul>
+        <li>Naval Kishore Road, opposite Novelty Cinema</li>
+        <li>Lalbagh, Lucknow 226001</li>
+        <li>Open daily, 4–10 PM</li>
+        <li><a href="tel:+919628744871">+91 96287 44871</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <div class="wrap">
+      <span>© 2026 Jain Chaat Bhandar, Lucknow. All rights reserved.</span>
+      <span>Takeaway, self-service and delivery via Swiggy &amp; <a href="https://www.zomato.com/lucknow/jain-chaat-bhandar-1-lalbagh" target="_blank" rel="noopener">Zomato</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= lightbox ================= -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close photo viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <img src="" alt="">
+  <p class="lb-cap"></p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* mobile nav */
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.getElementById("nav");
+  toggle.addEventListener("click", function(){
+    var open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  nav.addEventListener("click", function(e){
+    if (e.target.tagName === "A" && nav.classList.contains("open")){
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded","false");
+    }
+  });
+
+  /* reveal — hero stagger on load, section heads + menu board on scroll */
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var risers = Array.prototype.slice.call(document.querySelectorAll(".rise"));
+  if (reduced || !("IntersectionObserver" in window)){
+    risers.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+    risers.forEach(function(el){ io.observe(el); });
+  }
+
+  /* gallery slider */
+  var track = document.getElementById("gtrack");
+  var prev = document.getElementById("gprev");
+  var next = document.getElementById("gnext");
+  function step(){
+    var item = track.querySelector(".g-item");
+    return item ? item.getBoundingClientRect().width + 14 : track.clientWidth * 0.8;
+  }
+  function slide(dir){
+    track.scrollBy({ left: dir * step(), behavior: reduced ? "auto" : "smooth" });
+  }
+  function syncBtns(){
+    var max = track.scrollWidth - track.clientWidth - 2;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max;
+  }
+  prev.addEventListener("click", function(){ slide(-1); restAuto(); });
+  next.addEventListener("click", function(){ slide(1); restAuto(); });
+  track.addEventListener("scroll", syncBtns, { passive:true });
+  window.addEventListener("resize", syncBtns);
+  syncBtns();
+
+  /* autoplay: one card every few seconds, looping; pauses on hover, touch,
+     focus, hidden tab, open lightbox; off entirely under reduced motion */
+  var autoTimer = null;
+  var autoPaused = false;
+  function autoTick(){
+    if (autoPaused || document.hidden) return;
+    if (document.getElementById("lightbox").classList.contains("open")) return;
+    var max = track.scrollWidth - track.clientWidth - 2;
+    if (track.scrollLeft >= max){
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      slide(1);
+    }
+  }
+  function startAuto(){
+    if (reduced || autoTimer) return;
+    autoTimer = setInterval(autoTick, 3800);
+  }
+  function restAuto(){
+    if (autoTimer){ clearInterval(autoTimer); autoTimer = null; }
+    startAuto();
+  }
+  ["pointerenter","touchstart","focusin"].forEach(function(ev){
+    track.addEventListener(ev, function(){ autoPaused = true; }, { passive:true });
+  });
+  ["pointerleave","focusout"].forEach(function(ev){
+    track.addEventListener(ev, function(){ autoPaused = false; }, { passive:true });
+  });
+  track.addEventListener("touchend", function(){
+    setTimeout(function(){ autoPaused = false; }, 4000);
+  }, { passive:true });
+  startAuto();
+
+  /* lightbox */
+  var lb = document.getElementById("lightbox");
+  var lbImg = lb.querySelector("img");
+  var lbCap = lb.querySelector(".lb-cap");
+  var lbClose = lb.querySelector(".lb-close");
+  var lastFocus = null;
+
+  function openLB(fig){
+    var img = fig.querySelector("img");
+    if (!img) return;
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || "";
+    var cap = fig.querySelector("figcaption");
+    lbCap.textContent = cap ? cap.textContent : (img.alt || "");
+    lb.classList.add("open");
+    lastFocus = document.activeElement;
+    lbClose.focus();
+    document.body.style.overflow = "hidden";
+  }
+  function closeLB(){
+    lb.classList.remove("open");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll("[data-lightbox]").forEach(function(fig){
+    fig.setAttribute("tabindex","0");
+    fig.setAttribute("role","button");
+    fig.setAttribute("aria-label","View photo: " + (fig.querySelector("img") ? fig.querySelector("img").alt : "gallery image"));
+    fig.addEventListener("click", function(){ openLB(fig); });
+    fig.addEventListener("keydown", function(e){
+      if (e.key === "Enter" || e.key === " "){ e.preventDefault(); openLB(fig); }
+    });
+  });
+  lbClose.addEventListener("click", closeLB);
+  lb.addEventListener("click", function(e){ if (e.target === lb) closeLB(); });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && lb.classList.contains("open")) closeLB();
+  });
+})();
+</script>

@@ -1,0 +1,5 @@
+# Jain Chaat Bhandar — replace domain before launch
+User-agent: *
+Allow: /
+
+Sitemap: https://www.jainchaatbhandar.com/sitemap.xml
