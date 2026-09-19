@@ -36,7 +36,11 @@ export default function Story() {
             </p>
           </div>
           <div className="story-aside">
-            <PhotoFigure photo={storyPhoto} className="story-photo" />
+            <PhotoFigure
+              photo={storyPhoto}
+              className="story-photo"
+              sizes="(max-width: 900px) calc(100vw - 48px), 473px"
+            />
             <div className="jain-note">
               <h3>No onion. No garlic.</h3>
               <p>

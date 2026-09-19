@@ -51,7 +51,13 @@ export default function Hero() {
             </a>
           </Reveal>
         </div>
-        <PhotoFigure photo={heroPhoto} className="hero-photo" reveal eager />
+        <PhotoFigure
+          photo={heroPhoto}
+          className="hero-photo"
+          sizes="(max-width: 980px) calc(100vw - 48px), 385px"
+          reveal
+          eager
+        />
       </div>
       <div className="wrap">
         <div className="hero-facts">

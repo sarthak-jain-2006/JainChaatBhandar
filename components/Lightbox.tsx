@@ -11,6 +11,7 @@ import {
   type ReactNode,
   type Ref,
 } from "react";
+import Image from "next/image";
 import { IconX } from "./icons";
 import { useReveal } from "./useReveal";
 import type { Photo } from "@/lib/site";
@@ -98,12 +99,17 @@ export function PhotoFigure({
   style,
   eager = false,
   reveal = false,
+  sizes = "(max-width: 520px) 74vw, 380px",
 }: {
   photo: Photo;
   className?: string;
   style?: CSSProperties;
   eager?: boolean;
   reveal?: boolean;
+  /** Widest the slot ever gets, per breakpoint, so the optimiser is asked
+      for a card-sized file rather than the whole photograph. Defaults to
+      the gallery card, which is what most callers are. */
+  sizes?: string;
 }) {
   const { open } = useLightbox();
   const { ref, revealClass } = useReveal<HTMLElement>(reveal);
@@ -124,11 +130,11 @@ export function PhotoFigure({
         }
       }}
     >
-      <img
+      <Image
         src={photo.src}
         alt={photo.alt}
-        width={photo.width}
-        height={photo.height}
+        fill
+        sizes={sizes}
         loading={eager ? "eager" : "lazy"}
       />
       {(photo.slot || photo.caption) && (

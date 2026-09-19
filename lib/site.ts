@@ -16,7 +16,7 @@ export const shop = {
   name: "Jain Chaat Bhandar",
   established: 1968,
   tagline: "Established 1968, Lalbagh, Lucknow",
-  phoneDisplay: "+91 96287 44871",
+  phoneDisplay: "+91 9628744871",
   phoneHref: "tel:+919628744871",
   streetAddress: "Naval Kishore Road, opposite Novelty Cinema, Lalbagh",
   locality: "Lucknow",
@@ -153,7 +153,7 @@ export const gallery: Photo[] = [
   },
   {
     id: "seasoning",
-    src:"/img/mithilesh.png",
+    src:"/img/mithilesh.jpg",
     alt: "Sanjeev Kumar Jain preparing the house spice mix",
     width: 400,
     height: 300,
@@ -171,7 +171,7 @@ export const gallery: Photo[] = [
   },
   {
     id: "cid",
-    src:"/img/cid2.png",
+    src:"/img/cid2.jpg",
     alt: "Matar chaat served hot at the counter",
     width: 800,
     height: 300,
@@ -198,7 +198,7 @@ export const gallery: Photo[] = [
   },
   {
     id: "aparshakti",
-    src:"/img/aparshakti3.png",
+    src:"/img/aparshakti3.jpg",
     alt: "Matar chaat served hot at the counter",
     width: 400,
     height: 300,
@@ -216,7 +216,7 @@ export const gallery: Photo[] = [
   },
   {
     id: "rajkumar",
-    src: "/img/rajkumarrao.png",
+    src: "/img/rajkumarrao.jpg",
     alt: "Rajkumar Rao at Jain Chaat Bhandar",
     width: 400,
     height: 300,
