@@ -40,11 +40,15 @@ export default function SiteFooter() {
         <div className="wrap">
           <span>© 2026 Jain Chaat Bhandar, Lucknow. All rights reserved.</span>
           <span>
-            Takeaway, self-service and delivery via Swiggy &amp;{" "}
-            <a href={links.zomato} target="_blank" rel="noopener">
-              Zomato
-            </a>
-          </span>
+  Takeaway, self-service and delivery via{" "}
+  <a href={links.swiggy} target="_blank" rel="noopener">
+    Swiggy
+  </a>{" "}
+  &amp;{" "}
+  <a href={links.zomato} target="_blank" rel="noopener">
+    Zomato
+  </a>
+</span>
         </div>
       </div>
     </footer>

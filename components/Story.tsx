@@ -29,7 +29,7 @@ export default function Story() {
             </p>
             <p>
               Today the shop is run by Santosh Kumar Jain&apos;s sons,{" "}
-              <b>Sanjeev Kumar Jain and Raju</b>. Sanjeev still prepares the
+              <b>Sanjeev Kumar Jain and Rajeev Kumar Jain</b>. Sanjeev still prepares the
               house seasoning himself. The sweet curd, the tamarind chutney and
               the dry spice mix that finish every plate are made to the same
               hand, every day, before the counter opens.

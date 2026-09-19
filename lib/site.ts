@@ -126,12 +126,12 @@ export const gallery: Photo[] = [
   },
   {
     id: "golgappe",
-    src: photoSlot(400, 300, 10),
+    src: "/img/batashe3.jpeg",
     alt: "Golgappe being filled at the counter",
     width: 400,
     height: 300,
-    slot: "Slot 3:",
-    caption: " golgappe, mid-fill",
+    slot: "",
+    caption: "Pani ke batashe",
   },
   {
     id: "alootikki",
@@ -144,21 +144,21 @@ export const gallery: Photo[] = [
   },
   {
     id: "dahi-bade",
-    src: photoSlot(400, 300, 10),
+    src:"/img/dahikebbatashe.jpg",
     alt: "Dahi bade topped with sweet curd and spices",
     width: 400,
     height: 300,
-    slot: "Slot 5:",
-    caption: " dahi bade, topped",
+    slot: "",
+    caption: "Dahi ke batashe",
   },
   {
     id: "seasoning",
-    src: photoSlot(400, 300, 10),
+    src:"/img/mithilesh.png",
     alt: "Sanjeev Kumar Jain preparing the house spice mix",
     width: 400,
     height: 300,
-    slot: "Slot 6:",
-    caption: " the seasoning being made",
+    slot: "",
+    caption: "Mithilesh Chaturvedi",
   },
   {
     id: "queue",
@@ -171,9 +171,9 @@ export const gallery: Photo[] = [
   },
   {
     id: "cid",
-    src:"/img/cid.jpg",
+    src:"/img/cid2.png",
     alt: "Matar chaat served hot at the counter",
-    width: 400,
+    width: 800,
     height: 300,
     slot: "",
     caption: "CID Team",
@@ -198,7 +198,7 @@ export const gallery: Photo[] = [
   },
   {
     id: "aparshakti",
-    src:"/img/aparshakti.jpg",
+    src:"/img/aparshakti3.png",
     alt: "Matar chaat served hot at the counter",
     width: 400,
     height: 300,
@@ -213,6 +213,15 @@ export const gallery: Photo[] = [
     height: 300,
     slot: "",
     caption: "Rati Shankar Tripathi",
+  },
+  {
+    id: "rajkumar",
+    src: "/img/rajkumarrao.png",
+    alt: "Rajkumar Rao at Jain Chaat Bhandar",
+    width: 400,
+    height: 300,
+    slot: "",
+    caption: "Rajkumar Rao",
   },
 ];
 
@@ -277,13 +286,13 @@ export const eras = [
       "Santosh Kumar Jain sets up a pavement stall near the Lalbagh crossroads.",
   },
   {
-    title: "The shop",
+    title: "2000s",
     detail:
       "The stall moves into a proper unit at Lalbagh: same corner, same counter service.",
   },
   {
     title: "Today",
     detail:
-      "Sanjeev Kumar Jain and Raju run the counter; the seasoning is still made in-house.",
+      "Adarsh Jain and Aman Jain run the shop with the same dedication.",
   },
 ] as const;

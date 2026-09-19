@@ -47,7 +47,11 @@ export default function Reviews() {
           <a href={links.zomato} target="_blank" rel="noopener">
             Zomato
           </a>{" "}
-          and Swiggy for delivery.
+          and {" "}
+          <a href={links.swiggy} target="_blank" rel="noopener">
+          Swiggy
+          </a>{" "}
+          for delivery.
         </p>
       </div>
     </section>
